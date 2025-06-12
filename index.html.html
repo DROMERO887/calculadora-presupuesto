@@ -1,0 +1,92 @@
+<link rel="manifest" href="manifest.json" />
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('SW registrado', reg.scope))
+        .catch(err => console.error('SW error:', err));
+    });
+  }
+</script>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calculadora de Presupuesto</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png" />
+<meta name="theme-color" content="#00695c" />
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  h1, h2, h3 {
+    color: #00695c;
+  }
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  input[type="text"], input[type="number"] {
+    width: 60%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00796b;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: #009688;
+  }
+  .cost-list {
+    margin-top: 10px;
+  }
+  .cost-item {
+    margin-bottom: 6px;
+  }
+  .result {
+    margin-top: 20px;
+    background: #e0f2f1;
+    padding: 15px;
+    border-radius: 6px;
+  }
+  @media (max-width: 600px) {
+    input[type="text"], input[type="number"] {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ... todo el contenido anterior permanece igual ... -->
+
+<script>
+  // ... todas las funciones JavaScript anteriores ...
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('Service Worker registrado', reg))
+      .catch(err => console.error('Error al registrar Service Worker:', err));
+  }
+</script>
+
+</body>
+</html>
